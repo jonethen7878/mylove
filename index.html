@@ -1,17 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
+    <title>PIN PAD</title>
 
     <style>
         body {
             background-color: black;
             color: white;
+            text-align: center;
+            font-family: Aerial;
+        }
+
+        #display {
+            font-size: 30px;
+            margin: 20px;
+        }
+
+        button {
+            width: 70px;
+            height: 70px;
+            margin: 5px;
+            font-size: 25px;
         }
     </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>This is my first website.</p>
+    <h1>Enter PIN</h1>
+    <div id = "display">----</div>
+
+    <button onclick="addNumber('1')">1</button>
+    <button onclick="addNumber('2')">2</button>
+    <button onclick="addNumber('3')">3</button>
+    <br>
+
+    <button onclick="addNumber('4')">4</button>
+    <button onclick="addNumber('5')">5</button>
+    <button onclick="addNumber('6')">6</button>
+    <br>
+
+    <button onclick="addNumber('7')">7</button>
+    <button onclick="addNumber('8')">8</button>
+    <button onclick="addNumber('9')">9</button>
+    <br>
+
+    <button onclick="clear()">Clear</button>
+    <button onclick="addNumber('0')">0</button>
+    <button onclick="checkPin()">Enter</button>
+
+    <p id="message"></p>
+
+    <scripts>
+        let pin = "";
+
+        function addNumber(number) {
+            if (pin.length < 4) {
+                pin += number;
+                document.getElemendById("display").textContent = "*".repeat(pin.length);
+            }
+        }
+
+        function clearPin() {
+            pin = "";
+            document.getElementById("display").textContent = "----";
+            document.getElementById("message").textContent = "";
+        }
+
+        function checkPin() {
+            if (pin === "1234") {
+                document.getElementById("message").textContent = "Correct PIN!";
+            } else {
+                document.getElementById("message").textContent = "Incorrect PIN!";
+                pin = "";
+                document.getElementById("display").textContent = "----";
+            }
+        }               
+    </scripts>
 </body>
 </html>
