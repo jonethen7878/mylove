@@ -7,8 +7,23 @@
         body {
             background-color: black;
             color: white;
-            text-align: center;
             font-family: Aerial;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            height: 100vh;
+        }
+
+        .person img {
+            width: 250px;
+        }
+
+        .pinpad {
+            text-align: center;
         }
 
         #display {
@@ -25,29 +40,42 @@
     </style>
 </head>
 <body>
-    <h1>Enter PIN</h1>
-    <div id = "display">----</div>
 
-    <button onclick="addNumber('1')">1</button>
-    <button onclick="addNumber('2')">2</button>
-    <button onclick="addNumber('3')">3</button>
-    <br>
+    <div class="container">
 
-    <button onclick="addNumber('4')">4</button>
-    <button onclick="addNumber('5')">5</button>
-    <button onclick="addNumber('6')">6</button>
-    <br>
+        <div class="person">
+            <img src="https://us.123rf.com/450wm/jemastock/jemastock1706/jemastock170610614/80347711-business-man-cartoon-character-young-male-professional-vector-illustration.jpg?ver=6"
+                 alt="Me">
+        </div>
 
-    <button onclick="addNumber('7')">7</button>
-    <button onclick="addNumber('8')">8</button>
-    <button onclick="addNumber('9')">9</button>
-    <br>
+        <div class="pinpad">
+        
+            <h1>Enter PIN</h1>
+            <div id = "display">----</div>
 
-    <button onclick="clear()">Clear</button>
-    <button onclick="addNumber('0')">0</button>
-    <button onclick="checkPin()">Enter</button>
+            <button onclick="addNumber('1')">1</button>
+            <button onclick="addNumber('2')">2</button>
+            <button onclick="addNumber('3')">3</button>
+            <br>
 
-    <p id="message"></p>
+            <button onclick="addNumber('4')">4</button>
+            <button onclick="addNumber('5')">5</button>
+            <button onclick="addNumber('6')">6</button>
+            <br>
+
+            <button onclick="addNumber('7')">7</button>
+            <button onclick="addNumber('8')">8</button>
+            <button onclick="addNumber('9')">9</button>
+            <br>
+
+            <button onclick="clear()">Clear</button>
+            <button onclick="addNumber('0')">0</button>
+            <button onclick="checkPin()">Enter</button>
+
+            <p id="message"></p>
+        </div>
+    </div>
+        
 
     <script>
         let pin = "";
