@@ -129,6 +129,8 @@
         function checkPin() {
             if (pin.length < 4) {
                 document.getElementById("message").textContent = "PIN is 4 numbers!";
+                pin = "";
+                document.getElementById("display").textContent = "----";
                 return;
             }
             if (pin === "1220") {
