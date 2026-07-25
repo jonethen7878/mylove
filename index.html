@@ -66,7 +66,7 @@
         <div class="person">
 
             <div class="speech-bubble">
-                Hello!
+                <span id="dialogue"></span>
             </div>
             
             <img src="https://static.vecteezy.com/system/resources/previews/024/281/507/large_2x/cute-businessman-icon-free-png.png"
@@ -126,7 +126,21 @@
                 pin = "";
                 document.getElementById("display").textContent = "----";
             }
-        }               
+        }       
+
+        let text = "Heyyy babeee welcome to a little adventure! Guess the PIN to get more information!"
+        let index = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                document.getElementById("dialogue").textContent += text.charAt(index);
+                index++;
+
+                setTimeout(typeText, 100);
+            }
+        }
+        
+        typeText();
     </script>
 </body>
 </html>
