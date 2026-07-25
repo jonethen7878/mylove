@@ -99,12 +99,14 @@
             <button onclick="checkPin()">Enter</button>
 
             <p id="message"></p>
+            <p id="hint"></p>
         </div>
     </div>
         
 
     <script>
         let pin = "";
+        let wrongAttempts = 0;
 
         function addNumber(number) {
             if (pin.length < 4) {
@@ -120,10 +122,17 @@
         }
 
         function checkPin() {
-            if (pin === "1234") {
+            if (pin === "1220") {
                 document.getElementById("message").textContent = "Correct PIN!";
             } else {
+                wrongAttempts++;
+                
                 document.getElementById("message").textContent = "Incorrect PIN!";
+
+                if (wrongAttempts >= 2) {
+                    document.getElementById("hint").textContent = "Hint: The PIN is a special day!";
+                }
+                
                 pin = "";
                 document.getElementById("display").textContent = "----";
             }
