@@ -26,6 +26,26 @@
             text-align: center;
         }
 
+        .speech-bubble {
+            background-color: white;
+            color: black;
+            padding: 15px 25px;
+            border-radius: 20px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .speech-bubble::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: transplateX(-50%);
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+        }
+
         #display {
             font-size: 30px;
             margin: 20px;
@@ -44,6 +64,11 @@
     <div class="container">
 
         <div class="person">
+
+            <div class="speech-bubble">
+                Hello!
+            </div>
+            
             <img src="https://static.vecteezy.com/system/resources/previews/024/281/507/large_2x/cute-businessman-icon-free-png.png"
                  alt="Me">
         </div>
