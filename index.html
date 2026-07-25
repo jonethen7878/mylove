@@ -84,23 +84,23 @@
             <h1>Enter PIN</h1>
             <div id = "display">----</div>
 
-            <button onclick="addNumber('1')">1</button>
-            <button onclick="addNumber('2')">2</button>
-            <button onclick="addNumber('3')">3</button>
+            <button onclick="playSound(); addNumber('1')">1</button>
+            <button onclick="playSound(); addNumber('2')">2</button>
+            <button onclick="playSound(); addNumber('3')">3</button>
             <br>
 
-            <button onclick="addNumber('4')">4</button>
-            <button onclick="addNumber('5')">5</button>
-            <button onclick="addNumber('6')">6</button>
+            <button onclick="playSound(); addNumber('4')">4</button>
+            <button onclick="playSound(); addNumber('5')">5</button>
+            <button onclick="playSound(); addNumber('6')">6</button>
             <br>
 
-            <button onclick="addNumber('7')">7</button>
-            <button onclick="addNumber('8')">8</button>
-            <button onclick="addNumber('9')">9</button>
+            <button onclick="playSound(); addNumber('7')">7</button>
+            <button onclick="playSound(); addNumber('8')">8</button>
+            <button onclick="playSound(); addNumber('9')">9</button>
             <br>
 
             <button onclick="clear()">Clear</button>
-            <button onclick="addNumber('0')">0</button>
+            <button onclick="playSound(); addNumber('0')">0</button>
             <button onclick="checkPin()">Enter</button>
 
             <p id="message"></p>
@@ -156,6 +156,11 @@
         }
         
         typeText();
+
+        function playSound() {
+            let sound = new Audio ("click.mp3");
+            sound.play();
+        }
     </script>
 </body>
 </html>
