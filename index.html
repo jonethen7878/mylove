@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <div class ="title">
-        <h1>PIN PAD</h1>
-    </div>
+    <title>PIN PAD</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,13 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <style>
-        .title {
-            background-image: url("https://png.pngtree.com/png-clipart/20190903/original/pngtree-primrose-long-square-text-box-png-image_4445583.jpg");
-            background-size: cover;
-            background-position: center;
-
-            padding: 30px;
-        }
         
         body {
             background-color: #A71EC2;
@@ -63,6 +54,12 @@
             border-color: white transparent transparent transparent;
         }
 
+        .pin-title {
+            background-image: url("flower pin box");
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+
         #display {
             font-size: 30px;
             margin: 20px;
@@ -92,7 +89,7 @@
 
         <div class="pinpad">
         
-            <h1>Enter PIN</h1>
+            <h1 class="pin-title">Enter PIN</h1>
             <div id = "display">----</div>
 
             <button onclick="playSound(); addNumber('1')">1</button>
