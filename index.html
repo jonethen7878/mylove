@@ -55,17 +55,21 @@
         }
 
         .pin-title {
-            background-image: url("flower pin box");
-            background-size: 100% 100%;
-            background-position: center;
             width: 500px;
             height: 100px;
+            
+            background-image: url("flower pin box");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
 
-            margin: 0 auto;
-            text-align: center;
-            line-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-            font-size:40px;
+        .pin-title h1 {
+            margin: 0;
         }
 
         #display {
@@ -97,7 +101,10 @@
 
         <div class="pinpad">
         
-            <h1 class="pin-title">Enter PIN</h1>
+            <div class="pin-title">
+                <h1>Enter PIN</h1>
+            </div>
+            
             <div id = "display">----</div>
 
             <button onclick="playSound(); addNumber('1')">1</button>
