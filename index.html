@@ -158,6 +158,26 @@
             }
             if (pin === "1220") {
                 document.getElementById("message").textContent = "Correct PIN!";
+
+                document.getElementById("dialogue").textContent = "";
+
+                let newText = "Good job babeee!!!! \n Now it's time for the next challenge!";
+                let newIndex = 0;
+
+                function typeNewText() {
+                    if (newIndex < newText.length) {
+                        document.getElemendById("dialogue").textContent += newText.charAt(newIndex);
+
+                        newIndex++;
+
+                        setTimeout(typeNewText, 100);
+                    } else {
+                        setTimeout(function () {
+                            window.location.href = "page2.html";
+                        }, 2000);
+                    }
+                }
+                typeNewText();
             } else {
                 wrongAttempts++;
                 
