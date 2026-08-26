@@ -166,11 +166,11 @@
 
                 function typeNewText() {
                     if (newIndex < newText.length) {
-                        document.getElemendById("dialogue").textContent += newText.charAt(newIndex);
+                        document.getElementById("dialogue").textContent += newText.charAt(newIndex);
 
                         newIndex++;
 
-                        setTimeout(typeNewText, 100);
+                        setTimeout(typeNewText, 50);
                     } else {
                         setTimeout(function () {
                             window.location.href = "page2.html";
@@ -200,7 +200,7 @@
                 document.getElementById("dialogue").textContent += text.charAt(index);
                 index++;
 
-                setTimeout(typeText, 100);
+                setTimeout(typeText, 50);
             }
         }
         
