@@ -135,6 +135,7 @@
     <script>
         let pin = "";
         let wrongAttempts = 0;
+        let typing = true;
 
         function addNumber(number) {
             if (pin.length < 4) {
@@ -158,6 +159,8 @@
             }
             if (pin === "1220") {
                 document.getElementById("message").textContent = "Correct PIN!";
+
+                typing = false;
 
                 document.getElementById("dialogue").textContent = "";
 
@@ -196,7 +199,7 @@
         let index = 0;
 
         function typeText() {
-            if (index < text.length) {
+            if (index < text.length && typing) {
                 document.getElementById("dialogue").textContent += text.charAt(index);
                 index++;
 
