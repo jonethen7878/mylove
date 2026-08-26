@@ -21,6 +21,19 @@
             text-align: ceneter;
         }
 
+        .answers {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .answers button {
+            height: 80px;
+            font-size: 22px;
+        }
+
         h1 {
             font-size: 40px;
             text-align: center;
@@ -28,6 +41,7 @@
 
         p {
             font-size: 25px;
+            text-align: center;
         }
 
         button {
@@ -45,10 +59,12 @@
         <p>Question 1</p>
         <p>What is my favorite color?</p>
 
-        <button>Red</button>
-        <button>Blue</button>
-        <button>Green</button>
-        <button>Purple</button>
+        <div class="answers">
+            <button>Answer 1</button>
+            <button>Answer 2</button>
+            <button>Answer 3</button>
+            <button>Answer 4</button>
+        </div>
     </div>
     
 </body>
