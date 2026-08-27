@@ -30,6 +30,23 @@
             font-size: 22px;
         }
 
+        .question-left,
+        .question-right {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+        }
+
+        .question-left {
+            left: -30px;
+            bottom: -40px;
+        }
+
+        .question-right {
+            right: -30px;
+            bottom: -40px;
+        }
+
         h1 {
             font-size: 40px;
             text-align: center;
@@ -64,6 +81,9 @@
 <body>
     <div class="quiz">
         <h1>Welcome to Challenge #2! <br> It's Quiz Time!</h1>
+
+        <img class="question-left" src="images/question">
+        <img class="question-right" src="images/question">
 
         <p>Question 1</p>
         <p>What is my favorite color?</p>
